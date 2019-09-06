@@ -1,24 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import image from "../src/images/instagram-logo.png";
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+class App extends React.Component {
+  render() {
+    return (
+      <div className="navbar">
+          <div id="logo">
+              <button>
+                  <i className="fab fa-instagram"></i>
+                  
+                  <img id="logoText" src ={image} alt="Instagram logo" height= "45px" width = "100px"/>
+              </button>
+          </div>
 
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          <div id="search">
+              <input type="text" placeholder= "Search"></input>
+          </div>
+
+          <div id="S">
+              
+              <button><i className="fas fa-paper-plane"></i></button>
+          </div>
+        
+      </div>
+    );
+  }
 }
 
 export default App;
